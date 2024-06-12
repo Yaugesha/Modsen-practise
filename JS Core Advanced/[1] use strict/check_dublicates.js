@@ -5,15 +5,15 @@
 
 "use strict";
 
-const include = (arr, value) => {
+const isDublicate = (arr, value) => {
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === value) {
+    if (arr[i] == value && typeof arr[i] == typeof value) {
       return true;
     }
   }
   return false;
 };
 
-console.log(include([1, "str1", "str2", 2, 3, 4], 2)); // true
-console.log(include([1, "str1", "str2", 2, 3, 4], 0)); // false
-console.log(include([1, "str1", "str2", 2, 3, 4], "str2")); // false
+console.log(isDublicate([1, "str1", "str2", 2, 3, 4], "str2")); // true
+console.log(isDublicate([1, "str1", "str2", "2", 3, 4], 2)); // false
+console.log(isDublicate([1, "str1", "str2", 2, 3, 4], 0)); // false
