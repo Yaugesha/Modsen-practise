@@ -1,5 +1,6 @@
 import Details from "./components/details";
 import Form from "./components/form";
+import InputNumber from "./components/numberInput";
 
 function App() {
   const details =
@@ -8,6 +9,9 @@ function App() {
     <>
       <Form />
       <Details details={details} />
+      <br />
+      <br />
+      <InputNumber />
     </>
   );
 }
